@@ -1,22 +1,22 @@
 body {
-  background: #eee; }
+  background: #369;
+  font-family: Verdana, "Trebuchet MS", sans-serif; }
+  body > h1 {
+    color: #eee;
+    font-size: 3em;
+    margin: 10px 0 0 10px; }
 
-.blog > h1 {
-  color: red;
-  border: 1px solid red; }
-.blog .entry h1 {
-  color: blue;
-  font-size: 20px; }
-.blog .entry p {
-  font-size: 12px;
-  margin: 20px; }
-  html.csscolumns .blog .entry p {
-    column-count: 2;
-    column-gap: 10px;
-    margin: 10px; }
-.blog .entry a {
-  color: red; }
-  .blog .entry a:hover {
-    color: blue; }
+.entry {
+  background: white;
+  margin: 10px;
+  padding: 11.5px; }
+  .entry h1 {
+    font-size: 1.2em;
+    margin: 0px; }
+  .entry .date {
+    font-size: 0.3em;
+    color: #369; }
+  .entry a {
+    color: #369; }
 
 /*# sourceMappingURL=main.css.map */
