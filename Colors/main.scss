@@ -1,13 +1,10 @@
-$background: desaturate(#187, 50%);
-$text-color: complement($background);
-$highlighted-text-color: lighten($text-color, 20%);
+@import "_reset.scss";
+//normalize.css
 
-body {
-  background: $background;
-  font-family: sans-serif;
-  color: $text-color;
-}
-
-a {
-  color: $highlighted-text-color;
-}
+//Definings
+@import "_variables.scss";
+@import "_mixins.scss";
+//Global Styles
+@import "_globals.scss";
+//Page specifics
+@import "pages/_about_us.scss";

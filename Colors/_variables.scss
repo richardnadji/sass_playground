@@ -1,0 +1,6 @@
+//Colors
+$background: desaturate(#187, 50%);
+$text-color: complement($background);
+$highlighted-text-color: lighten($text-color, 20%);
+
+//Sizes
