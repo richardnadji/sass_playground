@@ -28,3 +28,26 @@ div {
 @include color_class(blue);
 @include color_class(green);
 @include color_class(grey);
+
+.container {
+  width: 100%;
+  height: auto;
+  border: 0;
+  div {
+    width: auto;
+    height: 10px;
+    border: 1px solid black;
+  }
+}
+
+@for $i from 1 through 51 {
+  .box:nth-child(#{$i}) {
+    background: darken(white, $i);
+  }
+}
+
+@each $member in ik, jij, hij, zij {
+  .bandmember.#{$member} {
+    background: url("images/#{$member}.jpg");
+  }
+}
