@@ -46,8 +46,37 @@ div {
   }
 }
 
-@each $member in ik, jij, hij, zij {
-  .bandmember.#{$member} {
-    background: url("images/#{$member}.jpg");
+//list sample with ...
+@mixin group($groupName, $members...) {
+  @each $member in $members {
+    .#{$groupName}.#{$member} {
+      background: url("images/#{$groupName}/#{$member}.jpg");
+    }
   }
+}
+
+@include group(chipmunks, alvin, simon, theodore);
+
+//list sample within sass without ...
+@mixin group($groupName, $members) {
+  @each $member in $members {
+    .#{$groupName}.#{$member} {
+      background: url("images/#{$groupName}/#{$member}.jpg");
+    }
+  }
+}
+
+@include group(chipmunks, alvin simon theodore);
+
+//advanced mixin arguments
+@mixin otherBox($size: 50px, $color: red, $display: blocked) {
+  width: $size;
+  height: $size;
+  background: $color;
+  display: $display;
+}
+
+.otherBox {
+  @include otherBox(100px, blue);
+  @include otherBox();
 }
