@@ -1,11 +1,12 @@
 div {
-  width: 100px;
   height: 100px;
+  width: 100px;
   border: 1px solid black; }
 
 .red {
   color: red;
-  background: red; }
+  background: red;
+  border-color: cyan; }
 
 .blue {
   color: blue;

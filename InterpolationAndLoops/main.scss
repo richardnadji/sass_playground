@@ -1,14 +1,27 @@
-div {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-}
-
 @mixin color_class($color) {
   .#{$color} {
     color: $color;
     background: $color;
+    @if $color == red {
+      border-color: complement($color);
+    }
   }
+}
+
+@mixin box($width) {
+  height: 100px;
+  width: $width;
+  @if $width > 50px {
+    border: 1px solid black;
+  } @else if $width > 100px {
+    //do whatever
+  } @else {
+    border: 10px solid black;
+  }
+}
+
+div {
+  @include box(100px);
 }
 
 @include color_class(red);
